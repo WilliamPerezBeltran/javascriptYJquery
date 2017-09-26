@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	div{
+	 height: 100px;
+	 width: 100px;
+	 border:solid blue;
+	 margin-left: 100px;
+	 top:100px;
+	 padding: 5px;
+	 background:red;
+	 cursor: default;
+	}
+	button{
+		margin-left: 100px;
+		border:none;
+	}
+</style>
+	<title></title>
+</head>
+<body>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Catedral_de_Oviedo_imgen_gen.JPG" alt="la veda es bella " onclick="console.log(this.alt)" width="200px" height="400px">
+
+<div id="midiv" onclick="console.log(this.innerHTML)" >la vida es bella </div>
+
+<script type="text/javascript">
+	function mifuncion(midiv){
+		elemen=document.getElementById(midiv);
+		elemen.style.transition="opacity 0.5s linear 0s";
+		elemen.style.opacity=0;
+	}
+	
+</script>
+</body>
+</html>

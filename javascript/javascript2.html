@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+		div {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button{
+	background-color: #45a049;
+	 width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.div1 {
+    border-radius: 5px;
+    background: #f2f2f2;
+    padding: 1px0;
+    margin: 20px, 20px, 20px, 20px;
+    border:none; 
+
+}
+.openColor{
+	background: green;
+
+}
+.openColorChange{
+	background: black;
+
+}
+#box1{
+	width:400px;
+	height:200px;
+	background:#9DCEFF;
+	margin-left: 50px;
+}
+#box2{
+	width: 400px;
+	height:200px;
+	background:#9DCEFF;
+	margin-left: 50px;
+}
+#box3{
+	width: 400px;
+	height:0px;
+	background:#9DCEFF;
+	margin-left: 50px;
+	overflow: hidden; esconde las letras del div tambien 
+}
+#box4{
+	width: 400px;
+	height:200px;
+	background:#9DCEFF;
+	margin-left: 50px;
+	position: relative;
+	top:100px;
+	left: -400px;
+}
+	</style>
+}
+}
+
+
+</head>
+<body>
+<div class="col-md-6 col-md-offset-3">
+	<button type="button" onclick="funcion()">first button</button>
+	<button type="button"  onclick="getElementById('div1').innerHTML='second button presioned'">second button</button>
+	<button type="button"  onclick="funcion1()" ondblclick ="document.getElementById('div2').className='openColorChange'">3 button</button>
+</div>
+<div id="div1" >we area learning </div>
+<div  id="div2" >we area learning bitch  </div>
+<br><br><br>
+<button type="button" onclick="changebg('box1','#F0F')">MAHENTa</button>
+<button type="button" onclick="changebg('box1','#0C0')">GREEN</button>
+<button type="button" onclick="changebg('box1','#9DCEFF')">BLUE</button>
+<BR>
+<div id="box1"></div>
+<br>
+<button type="button" onclick="fadeOut('box2')">fade out </button>
+<button type="button" onclick="fadeIn('box2')">fade in</button>
+<br>
+<div id="box2"></div>
+<br>
+<button type="button" onclick="slideOpen('box3')">slideOpen </button>
+<button type="button" onclick="SlideClosed('box3')">SlideClosed</button>
+<br>
+<div id="box3" >la vida es bella </div>
+<br><br><br><br>
+<br>
+<button type="button" onclick="slideIn('box4')">slideIn </button>
+<button type="button" onclick="SlideOut('box4')">SlideOut</button>
+
+
+<div id="box4" >la vida es dasdasdasdbella </div>
+<br><br><br><br>
+<script type="text/javascript">
+	function funcion(){
+		document.getElementById('div1').innerHTML='click first button ';
+	}
+	function funcion1(){
+		document.getElementById('div2').className='openColor';
+	}
+
+    function changebg(el,clr){
+		var elem=document.getElementById(el);
+		elem.style.transition="background 1.0s linear 0s";
+		elem.style.background=clr;
+	}
+
+
+	function fadeOut(el){
+		var elem=document.getElementById(el);
+		elem.style.transition="opacity 1.0s linear 0s";
+		elem.style.opacity=0;
+	}
+	function fadeIn(el){
+		var elem=document.getElementById(el);
+		elem.style.transition="opacity 1.0s linear 0s";
+		elem.style.opacity=1;
+	}
+	function slideOpen(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "height 1s linear 0s";
+	elem.style.height = "200px";
+}
+function SlideClosed(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "height 1s linear 0s";
+	elem.style.height = "0px";
+}
+function slideIn(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "left 1s linear 0s";
+	elem.style.left = "200px";
+}
+function SlideOut(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "left 1s linear 0s";
+	elem.style.left = "0px";
+}/*
+	var name = prompt("what is your name bitch ");
+	document.write(name);
+	console.log(name);
+	var lugar= window.location;
+	alert(name);
+	alert(lugar)
+	document.write("<h1>"+name+"</h1>")
+	document.write(document.baseURI+" this is the document.baseURI"+"<br>");
+	document.write(document.title+"this is the document.title"+"<br>");
+	document.write(Date());
+	document.write("<br>");
+	document.write(window.location);
+	*/
+
+	/*var width=window.innerwidth;
+	document.write(width+"<br>");
+	 
+	 var windowStatus=window.closed;
+	 document.write(windowStatus +"<br>");
+
+	 var name;
+	 name=prompt("what is your name "+"<br>");
+	 document.write(name);
+	 console.log(name);
+	 document.write("<h1>"+name+"</h1>");
+	 document.write(document.title);
+	 document.write("<h1>"+name+"</h1>");
+	 var pars=document.getElementsByTagName("p");
+	 document.write(pars+" this is the pars variable <br>");
+	 document.write(pars.length);
+
+	 var funcion=name;
+	 mifuncion(funcion);
+
+
+	 function mifuncion (){
+	 	alert("we are on the function sentence "+ funcion );
+	 }
+	 
+	 funcion ="hasta la vista baby";
+	 mifuncion(funcion );
+	 */
+
+
+	 console.log(document.baseURI);
+
+
+	
+</script>
+
+</body>
+</html>

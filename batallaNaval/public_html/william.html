@@ -1,0 +1,116 @@
+ <html>
+    <head>
+        <title>batalla Naval</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style type="text/css">
+     
+             #divGeneralBarcoEnemigo{
+                       border: 1px solid black;
+                       width: 1000px;
+                       height: 500px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                       
+                        
+                       
+                     }
+            #divGeneralMiBarco{
+                       border: 1px solid black;
+                       width: 1000px;
+                       height: 500px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                       
+                        
+                       
+                     }
+                     
+             #divBarcoEnemigo{
+                       border: 1px solid black;
+                       width: 300px;
+                       height: 400px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                        float: left;
+                     }
+            #divMiBarco{
+                       border: 1px solid black;
+                       width: 300px;
+                       height: 400px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                        float: left;
+                     }
+          
+                    
+    </style>
+    <body>
+ 
+ 
+ 
+ 
+ 
+ 
+ <div id="divGeneralBarcoEnemigo">
+     <div id="divBarcoEnemigo">
+         <table  >              
+                    <tr> 
+                      <td height="50" width="50"></td>
+                      <td height="50" width="50">fila</td>
+                      <td height="50" width="50">columna</td>
+                      <td height="50" width="50">button</td>
+                      <td height="50" width="50"></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">barco1</td>
+                      <td height="50" width="50"><input id="numero1" type="text"  size="4"></td>
+                      <td height="50" width="50"><input id="numero2"  type="text" size="4"></td>
+                      <td height="50" width="50"><button onclick="botonwilliam()">enviar</button></td>
+                    </tr>
+                   
+                </table>
+     </div>
+       
+ </div>
+ 
+ 
+        
+           
+       
+        
+       
+        
+       
+       
+    
+        
+        <script>
+            
+          function botonwilliam(){
+              
+              var numero1=document.getElementById('numero1').value;
+               var numero2=document.getElementById('numero2').value;
+             
+             var resta=numero1-numero2;
+             var multiplicacion=numero1*numero2;
+              var divison=numero1/numero2;
+              alert('resta'+resta);
+              alert('multiplicacion'+multiplicacion);
+              alert('divison'+divison);
+            
+            
+             
+          }
+          
+         
+     
+           
+             
+           
+            
+        </script>
+    </body>
+</html>

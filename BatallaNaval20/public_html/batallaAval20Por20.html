@@ -1,0 +1,576 @@
+ <html>
+    <head>
+        <title>batalla Naval</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style type="text/css">
+     
+             #divGeneralBarcoEnemigo{
+                       border: 1px solid black;
+                       width: 1000px;
+                       height: 100px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                       
+                        
+                       
+                     }
+            #divGeneralMiBarco{
+                       border: 1px solid black;
+                       width: 1000px;
+                       height: 100px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                       
+                        
+                       
+                     }
+                     
+             #divBarcoEnemigo{
+                       border: 1px solid black;
+                       width: 300px;
+                       height: 400px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                        float: left;
+                     }
+            #divMiBarco{
+                       border: 1px solid black;
+                       width: 500px;
+                       height: 400px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                        float: left;
+                     }
+            #informacion{
+                       border: 1px solid black;
+                       width: 250px;
+                       height: 400px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                        float: left;
+                     }         
+          
+                    
+    </style>
+    <body>
+ 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        <div id="informacion">
+             <!-- crear barcos de mi tablero y disparos •••••• --> 
+        	 <table  >              
+                    <tr> 
+                      <td height="10" width="10"></td>
+                      <td height="10" width="10">fila</td>
+                      <td height="10" width="10">columna</td>
+                      <td height="10" width="10">button</td>
+                      <td height="10" width="10"></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="10" width="10">barco1</td>
+                      <td height="10" width="10"><input id="filabarco1" type="text"  size="4"></td>
+                      <td height="10" width="10"><input id="columnabarco1"  type="text" size="4"></td>
+                      <td height="10" width="10"><button onclick="MiBarco1()">enviar</button></td>
+                    </tr>
+                    <tr>
+                      <td height="10" width="10">barco2</td>
+                      <td height="10" width="10"><input id="filabarco2" type="text"  size="4"></td>
+                      <td height="10" width="10"><input id="columnabarco2" type="text"  size="4"></td>
+                      <td height="10" width="10"><button onclick="MiBarco2()">enviar</button></td>
+                    </tr>
+                    <tr>
+                      <td height="10" width="10">disparo</td>
+                      <td height="10" width="10"><input id="disparofila" type="text"  size="4"></td>
+                      <td height="10" width="10"><input id="disparocolumna" type="text"  size="4"></td>
+                      <td height="10" width="10"><button onclick="TiroDeMiBarco()">enviar</button></td>
+                    </tr>
+                </table>
+        </div>
+        <div id="divMiBarco">
+        	 <p>Posiciones de mi tablero</p>
+                <table border="1px"  >              
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr><tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>
+                      <td height="10" width="10">5</td>
+                      <td height="10" width="10">6</td>
+                      <td height="10" width="10">7</td>
+                      <td height="10" width="10">8</td>
+                      <td height="10" width="10">9</td>
+                      <td height="10" width="10">10</td>
+                      <td height="10" width="10">11</td>
+                      <td height="10" width="10">12</td>
+                      <td height="10" width="10">13</td>
+                      <td height="10" width="10">14</td>
+                      <td height="10" width="10">15</td>
+                      <td height="10" width="10">16</td>
+                      <td height="10" width="10">17</td>
+                      <td height="10" width="10">18</td>
+                      <td height="10" width="10">19</td>
+                      <td height="10" width="10">20</td>
+                      
+                    </tr>
+              </table>
+        </div>
+        <div id="divMiBarco"><p>Mimarcador</p>
+                <table border="1px"  >              
+                    <tr> 
+                      <td height="10" width="10">*</td>
+                      <td height="10" width="10">1</td>
+                      <td height="10" width="10">2</td>
+                      <td height="10" width="10">3</td>
+                      <td height="10" width="10">4</td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td  height="10" width="10">A</td>
+                      <td height="10" width="10"><p id="marcadort100"></p></td>
+                      <td height="10" width="10"><p id="marcadort101"></p></td>
+                      <td height="10" width="10"><p id="marcadort102"></p></td>
+                      <td height="10" width="10"><p id="marcadort103"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="10" width="10">B</td>
+                      <td height="10" width="10"><p id="marcadort110"></p></td>
+                      <td height="10" width="10"><p id="marcadort111"></p></td>
+                      <td height="10" width="10"><p id="marcadort112"></p></td>
+                      <td height="10" width="10"><p id="marcadort113"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="10" width="10">C</td>
+                      <td height="10" width="10"><p id="marcadort120"></p></td>
+                      <td height="10" width="10"><p id="marcadort121"></p></td>
+                      <td height="10" width="10"><p id="marcadort122"></p></td>
+                      <td height="10" width="10"><p id="marcadort123"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="10" width="10">D</td>
+                      <td height="10" width="10"><p id="marcadort130"></p></td>
+                      <td height="10" width="10"><p id="marcadort131"></p></td>
+                      <td height="10" width="10"><p id="marcadort132"></p></td>
+                      <td height="10" width="10"><p id="marcadort133"></p></td>                  
+                    </tr>                         
+              </table>
+        </div>
+ 
+        
+        
+           
+       
+        
+       
+        
+       
+       
+    
+        
+        <script>
+            
+          function MiBarco1(){
+             var filabarco1=document.getElementById('filabarco1').value;
+             var columnabarco1=document.getElementById('columnabarco1').value;
+             document.getElementById('t1'+filabarco1+columnabarco1).innerHTML = 'barco'; 
+             document.getElementById('t1'+filabarco1+columnabarco1).style.borderColor='blue';
+             
+          }
+          
+          function MiBarco2(){
+             var filabarco2=document.getElementById('filabarco2').value;
+             var columnabarco2=document.getElementById('columnabarco2').value;
+             document.getElementById('t1'+filabarco2+columnabarco2).innerHTML = 'barco';   
+          }
+          /*value:optengo o cojo la informacion pero de un imput *
+           *innerHTML: escribo la informacion y a la misma vez consulto lo que esta dentro  
+           */
+          var impacto1=0;
+          function TiroDeMiBarco(){
+           var disparoFila= document.getElementById('disparofila').value;
+           var disparoColumna= document.getElementById('disparocolumna').value;
+           var dis=document.getElementById('t2'+disparoFila+disparoColumna).innerHTML;/*con este innerHTML consulto sí ay algo */
+           if(dis == ""){
+               document.getElementById('t2'+disparoFila+disparoColumna).innerHTML = 'O';
+               document.getElementById('marcadort2'+disparoFila+disparoColumna).innerHTML = 'O';
+           }else if(dis == 'barco'){
+               document.getElementById('t2'+disparoFila+disparoColumna).innerHTML = 'X'; 
+               document.getElementById('marcadort2'+disparoFila+disparoColumna).innerHTML = 'X';
+                impacto1++;
+                  if(impacto1==1){
+                      alert('has dado en el blanco busca el otro barco ');
+                  }else if(impacto1==2){
+                      alert('Has ganado el juego se ha terminado ');
+                  }
+           }
+       }
+       
+       
+       function BarcoEnemigo1(){
+               var filaBarcoEnemigo1 =document.getElementById('filabarcoEnemigo1').value;
+               var columnaBarcoEnemigo1 =document.getElementById('columnabarcoEnemigo1').value;
+               document.getElementById('t2'+filaBarcoEnemigo1+columnaBarcoEnemigo1).innerHTML = 'barco'; 
+           }
+           
+       function BarcoEnemigo2(){
+               var filabarcoEnemigo2 =document.getElementById('filabarcoEnemigo2').value;
+               var columnabarcoEnemigo2 =document.getElementById('columnabarcoEnemigo2').value;
+               document.getElementById('t2'+filabarcoEnemigo2+columnabarcoEnemigo2).innerHTML = 'barco'; 
+       }
+       var impacto=0;
+       function TiroEnemigo(){
+              var disparofilaEnemigo= document.getElementById('disparofilaEnemigo').value;
+              var disparocolumnaEnemigo= document.getElementById('disparocolumnaEnemigo').value;
+              dis1=document.getElementById('t1'+disparofilaEnemigo+disparocolumnaEnemigo).innerHTML;
+              if(dis1==""){
+                  document.getElementById('t1'+disparofilaEnemigo+disparocolumnaEnemigo).innerHTML='O';
+                  document.getElementById('marcadort1'+disparofilaEnemigo+disparocolumnaEnemigo).innerHTML='O';
+                  
+                  
+              }else if(dis1=="barco"){
+                  document.getElementById('t1'+disparofilaEnemigo+disparocolumnaEnemigo).innerHTML='X';
+                  document.getElementById('marcadort1'+disparofilaEnemigo+disparocolumnaEnemigo).innerHTML='X';
+                  impacto++;
+                  if(impacto==1){
+                      alert('has dado en el blanco busca el otro barco ');
+                  }else if(impacto==2){
+                      alert('Has ganado el juego se ha terminado ');
+                  }
+              }
+       }
+           
+           
+             
+           
+            
+        </script>
+    </body>
+</html>

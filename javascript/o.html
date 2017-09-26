@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<div id="seccion" style="width:150px; height:60px; border:thin solid silver">
+
+
+
+<script type="text/javascript">
+	window.onload=function(){
+		document.getElementById('seccion').onmouseover=funcion;
+		document.getElementById('seccion').onmouseout=funcion;
+	}
+	/*La propiedad type indica el tipo de evento producido, lo que es útil cuando una misma función se utiliza para manejar varios eventos:
+
+var tipo = evento.type;
+La propiedad type devuelve el tipo de evento producido, que es igual al nombre del evento pero sin el prefijo on.*/
+
+	function funcion(elevento){
+		var evento= elevento || window.event;// esta linea ay que ponerla porque el evento object event se crea automaticamente y queda guardado el la variable evento Por otra parte, en el resto de navegadores, el objeto event se obtiene mágicamente a partir del argumento que el navegador crea automáticamente:
+
+		switch(evento.type) {//La propiedad type indica el tipo de evento producido, lo que es útil cuando una misma función se utiliza para manejar varios eventos:
+    case 'mouseover':
+        this.style.borderColor='blue';
+        this.style.borderWidth ='medium';
+        break;
+    case 'mouseout':
+        this.style.borderColor='silver';
+        this.style.borderWidth ='thin';
+        break;
+}
+
+	}
+</script>
+</body>
+</html>

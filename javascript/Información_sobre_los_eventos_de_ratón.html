@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div id="info"></div>
+
+
+<script type="text/javascript">
+//Las coordenadas más sencillas son las que se refieren a la posición del puntero respecto de la ventana del navegador, que se obtienen mediante las propiedades clientX y clientY:
+function muestraInformacion(elEvento) {
+  var evento = elEvento || window.event;
+  var coordenadaX = evento.screenX;
+var coordenadaY = evento.screenY;
+  alert("Has pulsado el raton en la posicion: " + coordenadaX + ", " + coordenadaY);
+}
+ 
+document.onclick = muestraInformacion;
+  
+ 
+
+
+</script>
+</body>
+</html>

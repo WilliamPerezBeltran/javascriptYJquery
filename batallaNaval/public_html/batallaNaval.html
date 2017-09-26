@@ -1,0 +1,388 @@
+ <html>
+    <head>
+        <title>batalla Naval</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style type="text/css">
+     
+             #divGeneralBarcoEnemigo{
+                       border: 1px solid black;
+                       width: 1000px;
+                       height: 500px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                       
+                        
+                       
+                     }
+            #divGeneralMiBarco{
+                       border: 1px solid black;
+                       width: 1000px;
+                       height: 500px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                       
+                        
+                       
+                     }
+                     
+             #divBarcoEnemigo{
+                       border: 1px solid black;
+                       width: 300px;
+                       height: 400px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                        float: left;
+                     }
+            #divMiBarco{
+                       border: 1px solid black;
+                       width: 300px;
+                       height: 400px;
+                        margin-top: 20px;
+						margin-bottom: 20px;
+                        float: left;
+                     }
+          
+                    
+    </style>
+    <body>
+ 
+ 
+ 
+ 
+ 
+ 
+ <div id="divGeneralBarcoEnemigo">
+     <div id="divBarcoEnemigo">
+         <table  >              
+                    <tr> 
+                      <td height="50" width="50"></td>
+                      <td height="50" width="50">fila</td>
+                      <td height="50" width="50">columna</td>
+                      <td height="50" width="50">button</td>
+                      <td height="50" width="50"></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">barco1</td>
+                      <td height="50" width="50"><input id="filabarcoEnemigo1" type="text"  size="4"></td>
+                      <td height="50" width="50"><input id="columnabarcoEnemigo1"  type="text" size="4"></td>
+                      <td height="50" width="50"><button onclick="BarcoEnemigo1()">enviar</button></td>
+                    </tr>
+                    <tr>
+                      <td height="50" width="50">barco2</td>
+                      <td height="50" width="50"><input id="filabarcoEnemigo2" type="text"  size="4"></td>
+                      <td height="50" width="50"><input id="columnabarcoEnemigo2" type="text"  size="4"></td>
+                      <td height="50" width="50"><button onclick="BarcoEnemigo2()">enviar</button></td>
+                    </tr>
+                    <tr>
+                      <td height="50" width="50">disparo</td>
+                      <td height="50" width="50"><input id="disparofilaEnemigo" type="text"  size="4"></td>
+                      <td height="50" width="50"><input id="disparocolumnaEnemigo" type="text"  size="4"></td>
+                      <td height="50" width="50"><button onclick="TiroEnemigo()">enviar</button></td>
+                    </tr>
+                </table>
+     </div>
+         <!-- posiciones tablero enemigo •••••• -->          
+        <div id="divBarcoEnemigo">
+             <p>Posiciones tablero enemigo</p>
+                <table border="1px"  >              
+                    <tr> 
+                      <td height="50" width="50">*</td>
+                      <td height="50" width="50">1</td>
+                      <td height="50" width="50">2</td>
+                      <td height="50" width="50">3</td>
+                      <td height="50" width="50">4</td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">A</td>
+                      <td height="50" width="50"><p id="t200"></p></td>
+                      <td height="50" width="50"><p id="t201"></p></td>
+                      <td height="50" width="50"><p id="t202"></p></td>
+                      <td height="50" width="50"><p id="t203"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">B</td>
+                      <td height="50" width="50"><p id="t210"></p></td>
+                      <td height="50" width="50"><p id="t211"></p></td>
+                      <td height="50" width="50"><p id="t212"></p></td>
+                      <td height="50" width="50"><p id="t213"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">C</td>
+                      <td height="50" width="50"><p id="t220"></p></td>
+                      <td height="50" width="50"><p id="t221"></p></td>
+                      <td height="50" width="50"><p id="t222"></p></td>
+                      <td height="50" width="50"><p id="t223"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">D</td>
+                      <td height="50" width="50"><p id="t230"></p></td>
+                      <td height="50" width="50"><p id="t231"></p></td>
+                      <td height="50" width="50"><p id="t232"></p></td>
+                      <td height="50" width="50"><p id="t233"></p></td>                  
+                    </tr>                         
+              </table>
+               
+        </div>
+         <div id="divBarcoEnemigo">
+             <p>Marcado del enemigo</p>
+                <table border="1px"  >              
+                    <tr> 
+                      <td height="50" width="50">*</td>
+                      <td height="50" width="50">1</td>
+                      <td height="50" width="50">2</td>
+                      <td height="50" width="50">3</td>
+                      <td height="50" width="50">4</td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">A</td>
+                      <td height="50" width="50"><p id="marcadort200"></p></td>
+                      <td height="50" width="50"><p id="marcadort201"></p></td>
+                      <td height="50" width="50"><p id="marcadort202"></p></td>
+                      <td height="50" width="50"><p id="marcadort203"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">B</td>
+                      <td height="50" width="50"><p id="marcadort210"></p></td>
+                      <td height="50" width="50"><p id="marcadort211"></p></td>
+                      <td height="50" width="50"><p id="marcadort212"></p></td>
+                      <td height="50" width="50"><p id="marcadort213"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">C</td>
+                      <td height="50" width="50"><p id="marcadort220"></p></td>
+                      <td height="50" width="50"><p id="marcadort221"></p></td>
+                      <td height="50" width="50"><p id="marcadort222"></p></td>
+                      <td height="50" width="50"><p id="marcadort223"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">D</td>
+                      <td height="50" width="50"><p id="marcadort230"></p></td>
+                      <td height="50" width="50"><p id="marcadort231"></p></td>
+                      <td height="50" width="50"><p id="marcadort232"></p></td>
+                      <td height="50" width="50"><p id="marcadort233"></p></td>                  
+                    </tr>                         
+              </table>
+               
+         </div>
+ </div>
+ 
+ <div id="divGeneralMiBarco">
+        <div id="divMiBarco">
+             <!-- crear barcos de mi tablero y disparos •••••• --> 
+        	 <table  >              
+                    <tr> 
+                      <td height="50" width="50"></td>
+                      <td height="50" width="50">fila</td>
+                      <td height="50" width="50">columna</td>
+                      <td height="50" width="50">button</td>
+                      <td height="50" width="50"></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">barco1</td>
+                      <td height="50" width="50"><input id="filabarco1" type="text"  size="4"></td>
+                      <td height="50" width="50"><input id="columnabarco1"  type="text" size="4"></td>
+                      <td height="50" width="50"><button onclick="MiBarco1()">enviar</button></td>
+                    </tr>
+                    <tr>
+                      <td height="50" width="50">barco2</td>
+                      <td height="50" width="50"><input id="filabarco2" type="text"  size="4"></td>
+                      <td height="50" width="50"><input id="columnabarco2" type="text"  size="4"></td>
+                      <td height="50" width="50"><button onclick="MiBarco2()">enviar</button></td>
+                    </tr>
+                    <tr>
+                      <td height="50" width="50">disparo</td>
+                      <td height="50" width="50"><input id="disparofila" type="text"  size="4"></td>
+                      <td height="50" width="50"><input id="disparocolumna" type="text"  size="4"></td>
+                      <td height="50" width="50"><button onclick="TiroDeMiBarco()">enviar</button></td>
+                    </tr>
+                </table>
+        </div>
+        <div id="divMiBarco">
+        	 <p>Posiciones de mi tablero</p>
+                <table border="1px"  >              
+                    <tr> 
+                      <td height="50" width="50">*</td>
+                      <td height="50" width="50">1</td>
+                      <td height="50" width="50">2</td>
+                      <td height="50" width="50">3</td>
+                      <td height="50" width="50">4</td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">A</td>
+                      <td height="50" width="50"><p id="t100"></p></td>
+                      <td height="50" width="50"><p id="t101"></p></td>
+                      <td height="50" width="50"><p id="t102"></p></td>
+                      <td height="50" width="50"><p id="t103"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">B</td>
+                      <td height="50" width="50"><p id="t110"></p></td>
+                      <td height="50" width="50"><p id="t111"></p></td>
+                      <td height="50" width="50"><p id="t112"></p></td>
+                      <td height="50" width="50"><p id="t113"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">C</td>
+                      <td height="50" width="50"><p id="t120"></p></td>
+                      <td height="50" width="50"><p id="t121"></p></td>
+                      <td height="50" width="50"><p id="t122"></p></td>
+                      <td height="50" width="50"><p id="t123"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">D</td>
+                      <td height="50" width="50"><p id="t130"></p></td>
+                      <td height="50" width="50"><p id="t131"></p></td>
+                      <td height="50" width="50"><p id="t132"></p></td>
+                      <td height="50" width="50"><p id="t133"></p></td>                  
+                    </tr>                         
+              </table>
+        </div>
+        <div id="divMiBarco"><p>Mimarcador</p>
+                <table border="1px"  >              
+                    <tr> 
+                      <td height="50" width="50">*</td>
+                      <td height="50" width="50">1</td>
+                      <td height="50" width="50">2</td>
+                      <td height="50" width="50">3</td>
+                      <td height="50" width="50">4</td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td  height="50" width="50">A</td>
+                      <td height="50" width="50"><p id="marcadort100"></p></td>
+                      <td height="50" width="50"><p id="marcadort101"></p></td>
+                      <td height="50" width="50"><p id="marcadort102"></p></td>
+                      <td height="50" width="50"><p id="marcadort103"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">B</td>
+                      <td height="50" width="50"><p id="marcadort110"></p></td>
+                      <td height="50" width="50"><p id="marcadort111"></p></td>
+                      <td height="50" width="50"><p id="marcadort112"></p></td>
+                      <td height="50" width="50"><p id="marcadort113"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">C</td>
+                      <td height="50" width="50"><p id="marcadort120"></p></td>
+                      <td height="50" width="50"><p id="marcadort121"></p></td>
+                      <td height="50" width="50"><p id="marcadort122"></p></td>
+                      <td height="50" width="50"><p id="marcadort123"></p></td>                  
+                    </tr>
+                    
+                    <tr>
+                      <td height="50" width="50">D</td>
+                      <td height="50" width="50"><p id="marcadort130"></p></td>
+                      <td height="50" width="50"><p id="marcadort131"></p></td>
+                      <td height="50" width="50"><p id="marcadort132"></p></td>
+                      <td height="50" width="50"><p id="marcadort133"></p></td>                  
+                    </tr>                         
+              </table></div>
+ </div>
+        
+        
+           
+       
+        
+       
+        
+       
+       
+    
+        
+        <script>
+            
+          function MiBarco1(){
+             var filabarco1=document.getElementById('filabarco1').value;
+             var columnabarco1=document.getElementById('columnabarco1').value;
+             document.getElementById('t1'+filabarco1+columnabarco1).innerHTML = 'barco'; 
+             document.getElementById('t1'+filabarco1+columnabarco1).style.borderColor='blue';
+             
+          }
+          
+          function MiBarco2(){
+             var filabarco2=document.getElementById('filabarco2').value;
+             var columnabarco2=document.getElementById('columnabarco2').value;
+             document.getElementById('t1'+filabarco2+columnabarco2).innerHTML = 'barco';   
+          }
+          /*value:optengo o cojo la informacion pero de un imput *
+           *innerHTML: escribo la informacion y a la misma vez consulto lo que esta dentro  
+           */
+          var impacto1=0;
+          function TiroDeMiBarco(){
+           var disparoFila= document.getElementById('disparofila').value;
+           var disparoColumna= document.getElementById('disparocolumna').value;
+           var dis=document.getElementById('t2'+disparoFila+disparoColumna).innerHTML;/*con este innerHTML consulto sí ay algo */
+           if(dis == ""){
+               document.getElementById('t2'+disparoFila+disparoColumna).innerHTML = 'O';
+               document.getElementById('marcadort2'+disparoFila+disparoColumna).innerHTML = 'O';
+           }else if(dis == 'barco'){
+               document.getElementById('t2'+disparoFila+disparoColumna).innerHTML = 'X'; 
+               document.getElementById('marcadort2'+disparoFila+disparoColumna).innerHTML = 'X';
+                impacto1++;
+                  if(impacto1==1){
+                      alert('has dado en el blanco busca el otro barco ');
+                  }else if(impacto1==2){
+                      alert('Has ganado el juego se ha terminado ');
+                  }
+           }
+       }
+       
+       
+       function BarcoEnemigo1(){
+               var filaBarcoEnemigo1 =document.getElementById('filabarcoEnemigo1').value;
+               var columnaBarcoEnemigo1 =document.getElementById('columnabarcoEnemigo1').value;
+               document.getElementById('t2'+filaBarcoEnemigo1+columnaBarcoEnemigo1).innerHTML = 'barco'; 
+           }
+           
+       function BarcoEnemigo2(){
+               var filabarcoEnemigo2 =document.getElementById('filabarcoEnemigo2').value;
+               var columnabarcoEnemigo2 =document.getElementById('columnabarcoEnemigo2').value;
+               document.getElementById('t2'+filabarcoEnemigo2+columnabarcoEnemigo2).innerHTML = 'barco'; 
+       }
+       var impacto=0;
+       function TiroEnemigo(){
+              var disparofilaEnemigo= document.getElementById('disparofilaEnemigo').value;
+              var disparocolumnaEnemigo= document.getElementById('disparocolumnaEnemigo').value;
+              dis1=document.getElementById('t1'+disparofilaEnemigo+disparocolumnaEnemigo).innerHTML;
+              if(dis1==""){
+                  document.getElementById('t1'+disparofilaEnemigo+disparocolumnaEnemigo).innerHTML='O';
+                  document.getElementById('marcadort1'+disparofilaEnemigo+disparocolumnaEnemigo).innerHTML='O';
+                  
+                  
+              }else if(dis1=="barco"){
+                  document.getElementById('t1'+disparofilaEnemigo+disparocolumnaEnemigo).innerHTML='X';
+                  document.getElementById('marcadort1'+disparofilaEnemigo+disparocolumnaEnemigo).innerHTML='X';
+                  impacto++;
+                  if(impacto==1){
+                      alert('has dado en el blanco busca el otro barco ');
+                  }else if(impacto==2){
+                      alert('Has ganado el juego se ha terminado ');
+                  }
+              }
+       }
+           
+           
+             
+           
+            
+        </script>
+    </body>
+</html>

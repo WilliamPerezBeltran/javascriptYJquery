@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	document.write("william perez es un 'duro '.");
+	document.write('william es perez es un "duro"');
+	alert("que facil es incluir 'comillas simples'"+'y comillas "dobles "');
+	var william ="holoa mundo cruell y bello ";
+	var result=william.split(" ");
+	console.dir(result);
+
+	var william ="bello";
+	var result=william.split("");
+	console.dir(result);
+	var mensaje1 = "Hola";
+var mensaje2 = mensaje1.concat(" Mundo"); // mensaje2 = "Hola Mundo"
+console.dir(mensaje2)
+
+function calculaPrecioTotal(precio) {
+  var impuestos = 1.16;
+  var gastosEnvio = 10;
+  var precioTotal = ( precio * impuestos ) + gastosEnvio;
+  return precioTotal;
+}
+ 
+var precioTotal = calculaPrecioTotal(23.34);
+document.write(precioTotal);
+var will = 0/0;
+
+if(isNaN(will)) {
+  alert("La división no está definida para los números indicados");
+  document.write(will)
+};
+
+info("WILLi");
+
+function info(texto){
+    alert("el texto es "+ texto);
+
+    if(texto==texto.toUpperCase()){
+    	alert("el texto "+texto+ "esta escrito en mayusculas ");
+
+    }else if(texto==texto.toLowerCase()){
+    	alert("el texto "+texto+ "esta escrito en minusculas ");
+
+    }else{
+    	alert("el texto "+texto+ "esta convinado en mayusculas y  minusculas ");
+
+    }
+} document.write("<br>");
+
+ var cadena = "En un lugar de la Mancha de cuyo nombre no quiero acordarme...";
+var letras = cadena.split("");
+console.dir(letras);
+var resultado = "";
+for(i in letras) {
+  document.write(letras[i] );
+    }
+// Seguir trabajando con la variable "precioTotal";
+
+</script>
+</body>
+</html>

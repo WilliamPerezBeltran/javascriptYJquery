@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>la vida es bella </title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style type="text/css">
+  .box {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+}
+</style>
+</head>
+<body>
+<div class="box">sdsdsalfjkaklfjaklfjalkfjañkldj</div>
+<div class="col-md-3 col-md-offset-3">
+<div  id="oscar" style=" margin-top:30px; border: 1px solid silver; width:200px; height:300px; background: green;"  "></div>
+<button style="border:none; background:#45a049;  " onclick="mifuncion('oscar')">button</button>
+
+  
+</div>
+
+
+
+<script type="text/javascript">
+function mifuncion(id,color){
+  var elemento=document.getElementById(id);
+
+    elemento.style.transition='borderRadius 0.5s linear 0.5s';
+    elemento.style.borderRadius='40px';
+}
+	
+</script>
+</body>
+</html>

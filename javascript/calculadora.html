@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+     <title>Calculadora</title>
+
+  <style type="text/css">
+
+    input[type=button], input[type="text"]{
+      width: 100%;
+      height: 100%;
+      font-size:30px;
+    }
+
+    table, form{
+      width: 500px;
+      height: 400px;
+      margin: 0 auto;
+    }
+
+  </style>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <p>asdasdas</p>>
+    <form name="fo">
+  <h1>Calculadora basica en javascript</h1>
+  <table>
+    <tr>
+      <td colspan="5"><input type="text" name="valores" id="valores" onkeypress="return solonumeros(event)"></td>
+    </tr>
+
+    <tr>
+      
+    </tr>
+
+   <tr>
+     <td><input type="button" value="7"  onclick= "retornar(value)"></td>
+     <td><input type="button" value="8" onclick= "retornar(value)"></td>
+     <td><input type="button" value="9" onclick= "retornar(value)"></td>
+     <td><input type="button" value="+" onclick="comprobar(value)"></td>
+     <td><input type="button" value="-" onclick="comprobar(value)"></td>
+   </tr>
+
+    <tr>
+     <td><input type="button" value="4" onclick= "retornar(value)"></td>
+     <td><input type="button" value="5" onclick= "retornar(value)"></td>
+     <td><input type="button" value="6" onclick= "retornar(value)"></td>
+     <td><input type="button" value="*" onclick="comprobar(value)"></td>
+     <td><input type="button" value="/" onclick="comprobar(value)"></td>
+   </tr>
+
+   <tr>
+     <td><input type="button" value="1" onclick= "retornar(value)"></td>
+     <td><input type="button" value="2" onclick= "retornar(value)"></td>
+     <td><input type="button" value="3" onclick= "retornar(value)"></td>
+     <td><input type="button" value="<-" onclick ="eliminar()"></td>
+     <td><input type="button" value="C" onclick="eliminar_todo()"></td>
+   </tr>
+
+   <tr>
+     <td colspan="2"><input type="button" value="0" onclick= "retornar(value)"></td>
+     <td></td>
+     <td colspan="2"><input type="button" value="=" onclick="calcular()"></td>
+   </tr>
+
+
+  </table>
+</form>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+    var parrafos = document.getElementsByTagName("p");
+    console.log(parrafos);
+//para validar que solo se acepte numeros
+function solonumeros(e){
+    key=e.keycode || e.which;
+    teclado=String.fromCharCode(key);
+    numeros="0123456789";
+    especiales="8-37-39-46";
+    tecla_especial=false;
+    for(var i in especiales){
+        if (key==especiales[i]) {
+            tecla_especial=true;
+        }
+    }
+
+    if (numeros.indexOf(teclado)==-1 && !tecla_especial) {
+        return false;
+
+    }
+}
+
+//para asignar cada valor
+function retornar(num){
+     var anterior = document.fo.valores.value;
+     document.getElementById("valores").value= anterior + num;
+
+}
+
+//para eliminar ultimo caracter
+function eliminar(){
+  var anterior = document.fo.valores.value;
+  var nuevovalor= anterior.substring(0, anterior.length-1);
+  document.getElementById("valores").value=nuevovalor;
+}
+// para eliminar todo
+function eliminar_todo(){
+  document.fo.valores.value="";
+}
+
+//para  validar los signos
+function comprobar(num){ 
+var anterior = document.fo.valores.value;
+if(anterior==""){
+document.fo.valores.value=" ";
+}else{    
+    var anterior = document.fo.valores.value;
+    document.getElementById("valores").value=anterior+num;
+    esto=document.fo.valores.value;
+
+    record=0; 
+    igual=1; 
+    var letraRecord 
+    var b=0 
+    var letra="" 
+
+    for (a=1;a<esto.length;a++){      
+    if (esto.charAt(a)=="+" || esto.charAt(a)=="-" || esto.charAt(a)=="*" || esto.charAt(a)=="/" || esto.charAt(a)=="."){ 
+    igual=igual+1; 
+    letra=esto.charAt(a);
+    }else{ 
+         if(igual>record){record=igual;letraRecord=letra} 
+            igual=1 
+         } 
+         b=a 
+    }
+    
+    if(igual>record){
+      record=igual;
+      letraRecord=letra;
+    } 
+
+    if (record>2){
+        var anterior = esto;
+        var nuevovalor = anterior.substring(0, anterior.length-1);
+        document.getElementById("valores").value=nuevovalor;
+        record=0;b=0;igual=1;letra="";letraRecord="";
+    }     
+} 
+
+}
+// realizar las operaciones matemticas
+function calcular(){
+  var resultado= eval(document.fo.valores.value);
+  document.fo.valores.value=resultado;
+}
+
+
+
+var mensaje='hola william estamos aprendiendo ';
+var variableCharAt= mensaje.charAt(13);
+document.write(variableCharAt+"<br>");
+var variableIndexOf=mensaje.indexOf('z');
+document.write(variableIndexOf+"<br>");
+var variableLastIndexOf=mensaje.lastIndexOf('a');
+document.write(variableLastIndexOf+"<br>");
+var variaSubstring=mensaje.substring(4,12);
+document.write(variaSubstring+"<br>");
+var mensaje = "Hola Mundo, soy una cadena de texto!";
+var variableSplit=mensaje.split("");
+console.log(variableSplit)
+</script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>william manejadores de eventos </title>
+</head>
+<body>
+<div id="seccion" style="width:150px; height:60px; border:thin solid silver">
+  Sección de contenidos...
+</div>
+<script type="text/javascript">
+window.onload = function() {
+  document.getElementById("seccion").onmouseover = resalta;
+  document.getElementById("seccion").onmouseout = resalta;
+}
+
+  function resalta(elEvento) {
+  var evento = elEvento 
+  switch(evento.type) {
+    case 'mouseover':
+      this.style.borderColor = 'black';
+      break;
+    case 'mouseout':
+      this.style.borderColor = 'silver';
+      break;
+  }
+}
+
+</script>
+</body>
+</html>>

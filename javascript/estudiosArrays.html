@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>la vida es bella </title>
+</head>
+<body>
+<script type="text/javascript">
+	var arreglo =[1,2,3,4,3,2,1];
+	arreglo['william']="lka vida es bella "
+	
+console.dir(document.location);//
+console.dir(document);//
+
+var myarray=['william','oscar'];
+
+	for (var i = 0; i < myarray.length; i++) {
+		document.write(myarray [i]);
+		document.write("<br>")
+	}
+	myarray.push('rocio','edan')
+	for (var i = 0; i < myarray.length; i++) {
+		document.write(myarray [i] +" / ");
+		
+	}
+	document.write("<br>");
+	myarray.unshift("papa",'mama');
+	for (var i = 0; i < myarray.length; i++) {
+		document.write(myarray [i] +" / ");
+		
+	}
+	 var result=myarray.unshift("papa",'mama');
+	document.write(result);
+document.write("<br>");
+	var array1="La vida es tan, bella depende de como la veamos ";
+	var n=array1.indexOf("tan");
+	document.write(n);
+document.write("<br>");
+	var str = "Hello world, welcome to the universe.";
+var n = str.indexOf("welcome");
+document.write(n);
+
+
+var ctx = document.getElementById('canvas').getContext('2d');
+var offset = 0;
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.setLineDash([4, 2]);
+  ctx.lineDashOffset = -offset;
+  ctx.strokeRect(10, 10, 100, 100);
+}
+
+function march() {
+  offset++;
+  if (offset > 16) {
+    offset = 0;
+  }
+  draw();
+  setTimeout(march, 20);
+}
+
+march();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div id="info" style="border: 1px solid silver; width: 200px; height:200px ">raton </div>
+
+
+<script type="text/javascript">
+document.onmousemove=funcion;
+document.onclick=funcion;
+function funcion (elevento){
+	var evento=elevento || window.event;
+
+	switch(evento.type){
+		case 'mousemove':
+		
+		/*var docu=document.getElementById('info');
+		var cordenadaX=evento.clientX;
+		var cordenadaY= evento.clientY;
+		var cordenadaX1=evento.screenX;
+		var cordenadaY1=evento.screenY;
+		docu.innerHTML="navegador=["+cordenadaX+"] ["+cordenadaY+"]"+"<br>";
+		var mensaje="pantalla=["+cordenadaX1+"] ["+cordenadaY1+"]"+"<br>";
+		docu.innerHTML=docu.innerHTML+mensaje
+		//origen de la pagian cordenadas 
+*/
+var docu=document.getElementById('info'); 
+docu.style.background='red';	
+		var ie = navigator.userAgent.toLowerCase().indexOf('msie')!=-1;
+		console.dir(ie);
+		if(ie) {
+  coordenadaX = evento.clientX + document.body.scrollLeft;
+  coordenadaY = evento.clientY + document.body.scrollTop;
+  var mensaje="pantalla=["+coordenadaX+"] ["+coordenadaY+"]"+"<br>";
+		docu.innerHTML=mensaje;
+		
+}
+else {
+  coordenadaX = evento.pageX;
+  coordenadaY = evento.pageY;
+  var mensaje="origen=["+coordenadaX+"] ["+coordenadaY+"]"+"<br>";
+		docu.innerHTML=mensaje;
+		docu.style.backgroundColor="rgb("+coordenadaX+","+coordenadaY+",200)"; 
+		
+}
+		break;
+		case 'keypress':
+		docu.innerHTML="tipo de evento:"+evento.type+"<br>"+
+		               "tipo de evento:"+String.fromChardCode(evento.charCode)+"<br>";
+
+docu.innerHTML += "<br>--------------------------------------<br>" + mensaje
+
+		break;
+
+		
+		
+
+	}
+
+}
+ 
+ 
+/*
+
+
+
+
+
+document.onmousemove=muestrainformacion;
+document.onclick=muestrainformacion;
+document.onkeypress=muestrainformacion;
+function muestrainformacion(elevento){
+	var evento=elevento|| window.event;
+
+	switch(evento.type){
+		case 'mousemove':
+		var cordenadaX= evento.clientX;
+	var cordenadaY= evento.clientY;
+	var navegador="navegador: "+"["+cordenadaX+"]["+cordenadaY+"]"+"<br>";
+	document.getElementById('info').innerHTML=navegador;
+	var ie = navigator.userAgent.toLowerCase().indexOf('msie')!=-1;
+ 
+if(ie) {
+  coordenadaX = evento.clientX + document.body.scrollLeft;
+  coordenadaY = evento.clientY + document.body.scrollTop;
+}
+else {
+  coordenadaXpagina = evento.pageX;
+  coordenadaYpagina = evento.pageY;
+}
+var pagina="pagina: "+"["+coordenadaXpagina+"]["+coordenadaYpagina+"]";
+	document.getElementById('info').innerHTML= document.getElementById('info').innerHTML+pagina;
+	break;
+
+		case 'keypress':
+		var mensaje ="tipo de evento:"+evento.type+"<br>"+
+	             "Caracter pulsado: " + String.fromCharCode(evento.charCode);
+	              var mensaje = "Tipo de evento: " + evento.type + "<br>" +
+                "Propiedad keyCode: " + evento.keyCode + "<br>" +
+                "Propiedad charCode: " + evento.charCode + "<br>" +
+                "Caracter pulsado: " + String.fromCharCode(evento.charCode);
+ 
+  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
+
+		break;
+}
+
+	}
+	
+*/
+</script>
+</body>
+</html>

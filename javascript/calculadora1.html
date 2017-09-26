@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+    <style type="text/css">
+      input[type=button], input[type="text"]{
+      width: 100%;
+      height: 100%;
+      font-size:30px;
+    }
+
+    table, form{
+      width: 500px;
+      height: 400px;
+      margin: 0 auto;
+    }
+    </style>
+
+  </head>
+  <body>
+    <form name="fo">
+      <h1>calculadora basica javascript </h1>
+      <table >
+        <tr >
+          <td colspan="5"><input type="text" name="inputPrincipal" id="william" onkeypress=" return solonumeros(event)"></td>
+        </tr>
+        <tr></tr>
+      <tr>
+        <td><input type="button" name="" value="7" onclick="ponernumeros(value)"></td>
+        <td><input type="button" name="" value="8" onclick="ponernumeros(value)"></td>
+        <td><input type="button" name="" value="9" onclick="ponernumeros(value)"></td>
+        <td><input type="button" name="" value="+" onclick="validarSignos(value)"></td>
+        <td><input type="button" name="" value="-" onclick="validarSignos(value)"></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" name="" value="4" onclick="ponernumeros(value)"></td>
+        <td><input type="button" name="" value="5" onclick="ponernumeros(value)"></td>
+        <td><input type="button" name="" value="6" onclick="ponernumeros(value)"></td>
+        <td><input type="button" name="" value="*" onclick="validarSignos(value)"></td>
+        <td><input type="button" name="" value="/" onclick="validarSignos(value)"></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" name="" value="1" onclick="ponernumeros(value)"></td>
+        <td><input type="button" name="" value="2" onclick="ponernumeros(value)"></td>
+        <td><input type="button" name="" value="3" onclick="ponernumeros(value)"></td>
+        <td><input type="button" name="" value="<-" onclick="eliminarvalores()"></td>
+        <td><input type="button" name="" value="C" onclick="borrarTodo()"></td>
+      </tr>
+
+      <tr>
+        <td colspan="2"><input type="button" name="" value="0" onclick="ponernumeros(value)"></td>
+        <td></td>
+        <td colspan="2"><input type="button" name="" value="="></td>
+      </tr>
+      </table>
+      
+    </form>
+
+    <script type="text/javascript">
+
+    function solonumeros(elEvento){
+      var evento = elEvento || window.event;// captura el evento
+      // ahora tenemos acceso al alas propiedades del evento 
+    key=evento.keycode || evento.which;
+    console.log("este es el key: "+key+"<br>");
+    teclado=String.fromCharCode(key);
+    numeros="0123456789";
+    if (numeros.indexOf(teclado)==-1 ) {
+        return false;
+       }
+    }
+
+    function ponernumeros(valor){
+      var anterior= document.fo.inputPrincipal.value;
+     document.getElementById('william').value=anterior+valor;
+
+    }
+
+    function eliminarvalores(){
+      var capturaelement=document.fo.inputPrincipal.value;
+      var longitudElement=capturaelement.length-1;
+      var nuevoValor =capturaelement.substring(0,longitudElement);
+      document.getElementById('william').value=nuevoValor;
+
+    }
+    function borrarTodo(){
+      var capturaelement=document.fo.inputPrincipal.value;// captura elemento
+      document.getElementById('william').value="";
+
+    }
+
+//para  validar los signos
+
+function validarSignos(signo){
+  if(document.fo.inputPrincipal.value==""){
+    document.fo.inputPrincipal.value==""
+
+  }else{
+     var valor= document.fo.inputPrincipal.value;
+    document.getElementById('william').value=valor + signo;
+    var valor1= document.fo.inputPrincipal.value;
+    var valorsigno=valor1.charAt(valor1.length-1);
+    if(valorsigno=='+' || valorsigno=='-' || valorsigno=='*' || valorsigno=='7')
+      document.fo.inputPrincipal.value; 
+  }
+  
+
+}
+
+
+    </script>
+  </body>
+</html>
