@@ -1,0 +1,189 @@
+<!--  -->
+   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="transform.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../css-general/general.css"> -->
+    <title>css marker💪</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <ul>
+                <li>HTML template</li>
+                <li>WEeb template</li>
+                <li>Css galery</li>
+            </ul>
+        </div>
+    </header>
+    <div class="titulo-container">
+        <div class="titulo-item">css 3.0 maker</div>
+    </div>
+    <div class="contenido">
+        <div class="header-container">
+            <ul>
+                <li class="home">Home</li>
+                <li class="borderRadius">Border radius</li>
+                <li class="gradient">Gradient</li>
+                <li class="css-transform">CSS transform</li>
+                <!-- <li class="css-animation">CSS animation</li> -->
+                <!-- <li class="transition">CSS transition</li> -->
+                <li class="rgba">RBGA</li>
+                <li class="text-shadow">Text shadow</li>
+                <li class="box-shadow">Box shadow</li>
+                <li class="text-rotation">Text Rotation</li>
+                <!-- <li class="font-face">@Font Face</li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="contenido1">
+            <div class="box derecha">
+                <table>
+                    <tr>
+                        <td>Gradient Type:</td>
+                        <td>
+                            <select id="transform">
+                                <option value="all" >All</option>
+                                <option value="translate">translate</option>
+                                <option value="rotate">rotate</option>
+                                <option value="scale">scale</option>
+                                <option value="skew">skew</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <table class="all">
+                    <tr>
+                        <td>translate:</td>
+                        <td>
+                            <input type="range" value="0" min="-200" max="200" data-sizing="px"  name="translate">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rotate:</td>
+                        <td>
+                            <input type="range" value="0" min="0" max="360" data-sizing="deg"  name="rotate">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Scale:</td>
+                        <td>
+                            <input type="range" value="1" min="0.1" max="1.5" step="0.01"  name="scale">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>skew:</td>
+                        <td>
+                            <input type="range" value="0" min="-180" max="180" data-sizing="deg" name="skew">
+                        </td>
+                    </tr>
+                    
+                </table>
+                <table class="translate">
+                    <tr>
+                        <td>translateX:</td>
+                        <td>
+                            <input type="range" value="0" min="-200" max="200" data-sizing="px"  name="translateX">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>translateY:</td>
+                        <td>
+                            <input type="range" value="0" min="-200" max="200" data-sizing="px"  name="translateY">
+                        </td>
+                    </tr>
+                   
+                </table>
+                <table class="rotate">
+                    <tr>
+                        <td>rotate:</td>
+                        <td>
+                            <input type="range" value="0" min="0" max="360" data-sizing="deg"  name="rotate">
+                        </td>
+                    </tr>
+                   
+                </table>
+                <table class="scale">
+                    <tr>
+                        <td>scaleX:</td>
+                        <td>
+                            <input type="range" value="1" min="0.1" max="1.5" step="0.01"  name="scaleX">
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>scaleY:</td>
+                        <td>
+                            <input type="range" value="1" min="0.1" max="1.5" step="0.01"  name="scaleY">
+                        </td>
+                    </tr>
+                   
+                </table>
+                <table class="skew">
+                    <tr>
+                        <td>skewX:</td>
+                        <td>
+                            <input type="range" value="0" min="-180" max="180" data-sizing="deg" name="skewX">
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>skewY:</td>
+                        <td>
+                            <input type="range" value="0" min="-180" max="180" data-sizing="deg" name="skewY">
+                        </td>
+                    </tr>
+                   
+                </table>
+            </div>
+            <div class="box centro">
+                <div class="arriba">
+                    <div class="box-modificada allTransform">Transform</div>
+                    <div class="box-modificada translateTransform">Transform</div>
+                    <div class="box-modificada rotateTransform">Transform</div>
+                    <div class="box-modificada scaleTransform">Transform</div>
+                    <div class="box-modificada skewTransform">Transform</div>
+                </div>
+                <div class="abajo">
+                    <div class="circle circleTop">html</div>
+                    <div class="circle circleRight">css</div>
+                    <div class="circle circleLeft">js</div>
+                </div>
+            </div>
+            <div class="box izquierda">
+                <div class="setValueAll">
+                    <ul>
+                        <li>transform: translate(<span class="setValueAllTranslate">0px</span>) rotate(<span class="setValueAllRotate">0deg</span>) scale(<span class="setValueAllScale">1</span>) skew(<span class="setValueAllSkew">0deg</span>)</li>
+                    </ul>
+                </div>
+                <div class="setValueTranslate">
+                    <ul>
+                        <li>transform: translate(<span class="setValueTranslateX">0px</span>,<span class="setValueTranslateY">0px</span>);</li>
+                    </ul>
+                </div>
+                <div class="setValueRotate">
+                    <ul>
+                        <li>transform:rotate(<span class="setValueRotateR">0deg</span>)</li>
+                    </ul>
+                </div>
+                <div class="setValueScale">
+                    <ul>
+                        <li>transform:scale(<span class="scaleX">1</span>,<span class="scaleY">1</span>)</li>
+                    </ul>
+                </div>
+                <div class="setValueSkew">
+                    <ul>
+                        <li>transform:skew(<span class="skewX">1deg</span>,<span class="skewY">1deg</span>)</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="transform.js"></script>
+    <script type="text/javascript" src="../../javascript/javascript-general.js"></script>
+</body>
+
+</html>

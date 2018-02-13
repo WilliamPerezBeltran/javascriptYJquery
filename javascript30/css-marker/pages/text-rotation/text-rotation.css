@@ -1,0 +1,41 @@
+:root {
+    --rotate: 5deg;
+    --mode: lr-tb;
+}
+
+.box-modificada {
+    margin: 5px;
+    width: 150px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    box-shadow: 15px 15px 1px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.letra{
+     -webkit-transform: rotate(var(--rotate));
+    -moz-transform: rotate(var(--rotate));
+    -o-transform: rotate(var(--rotate));
+    writing-mode: var(--mode);
+
+}
+
+
+.derecha input{
+    margin-top:0px !important;
+}
+
+
+.izquierda ul li {
+    border-bottom: none;
+}
+
+.derecha select {
+    width: 100%;
+}

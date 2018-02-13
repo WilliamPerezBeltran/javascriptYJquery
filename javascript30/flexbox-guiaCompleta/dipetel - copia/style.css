@@ -1,0 +1,154 @@
+html {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    display: flex;
+}
+
+.slider img {
+    width: 900px;
+    height: 500px;
+}
+
+.bx-wrapper {
+    width: 900px;
+    height: 500px;
+}
+
+.wrapper {
+    width: 900px;
+    height: 1500px;
+    margin: 0 auto;
+    /*background: tomato;*/
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 10px;
+}
+
+.nav img {
+    width: 180px;
+    height: 70px;
+}
+
+
+.nav ul {
+    font-size: 14px;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    width: 80px;
+    text-align: center;
+}
+
+.nav ul li {
+    margin: 0 2px;
+    background: #BC5148;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+.nuestrosServicios {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.nuestrosServicios .flechaDerech {
+    flex: 1 1 auto;
+}
+
+.nuestrosServicios h2 {
+    margin: 0;
+    padding: 0;
+    flex: 1 1 90%;
+}
+
+.cajaPadre {
+    display: flex;
+    justify-content: space-around;
+}
+
+.caja {
+    margin: 0 40px;
+}
+
+
+.caja h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.will h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.proyectosRecientes {
+    margin-top: 50px;
+}
+
+.will {
+    display: flex;
+    justify-content: background: gray;
+}
+
+.osc {
+    background: mistyrose;
+    width: 100%;
+    height: 300px;
+    /*border: 1px solid black;*/
+}
+
+footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.derecha {
+    align-self: flex-end;
+}
+
+.box {
+    display: flex;
+    margin-top: 5px;
+}
+
+.box p {
+    margin: 0;
+    padding: 0;
+}
+.box i {
+    margin-right: 10px;
+}
+.owe{
+display: block;
+    background: red;
+
+}
+@media all and (max-width: 800px){
+    .nav ul {
+        flex-direction: column;
+}
+
+
+}

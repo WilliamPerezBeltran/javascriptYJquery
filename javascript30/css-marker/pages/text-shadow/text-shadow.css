@@ -1,0 +1,25 @@
+:root {
+    --HorizontalLength: 15px;
+    --VerticalLength: 15px;
+    --BlurRadius: 1px;
+    --ShadowColor: #000000;
+}
+.box-modificada {
+    margin: 5px;
+    width: 150px;
+    height: 100px;
+    border:1px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    text-shadow:var(--HorizontalLength) var(--VerticalLength) var(--BlurRadius) var(--ShadowColor);
+}
+.izquierda ul li{
+    border-bottom: none;
+}
+.derecha input{
+    margin-top:0px !important;
+}

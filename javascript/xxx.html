@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>la vida es bella </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+    .box {
+        position: relative;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease-in-out;
+    }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+    console.log('======================================');
+
+    function reverseString(str) {
+        var reverse = str.split('').reverse().join('');
+        console.log(reverse);
+        return str;
+    }
+
+    reverseString("hello");
+    console.log('======================================');
+
+    function factorialize(num) {
+        if (num == 0) {
+            return 1;
+        } else {
+            var factorial = 1
+            while (num > 1) {
+                factorial = factorial * num;
+                num--;
+                console.log(factorial);
+            }
+            return num;
+
+        }
+
+    }
+
+    factorialize(12);
+
+    console.log('======================================');
+
+
+
+
+    function palindrome(str) {
+        var stdr = str.replace(/ /g, '').toLowerCase().replace(/,/g, '').replace(/\./g, '');
+        console.log(stdr);
+        var william = str.toLowerCase().replace(/ /g, '').replace(/,/g, '').replace(/\./g, '').split('').reverse().join('');
+        console.log(william);
+
+        if (stdr == william) {
+            return true;
+
+        } else {
+            return false;
+        }
+
+    }
+
+    console.log(palindrome("never odd or even"));
+
+
+
+
+
+
+    console.log('======================================');
+
+    function findLongestWord(str) {
+        var frase = str.split(' ');
+        var longest = '';
+
+        for (var i = 0; i < frase.length; i++) {
+            if (frase[i].length > longest.length) {
+                longest = frase[i];
+            }
+        }
+        console.log(longest.length);
+        return str.length;
+    }
+
+    findLongestWord("Google do a barrel roll");
+
+    console.log('======================================');
+
+    function titleCase(str) {
+        frase = str.toLowerCase().split(' ');
+        nuevoArray = [];
+        nuevavariable = [];
+        for (var i = 0; i < frase.length; i++) {
+            nuevoArray.push(frase[i].split(''))
+        }
+        for (var x = 0; x < nuevoArray.length; x++) {
+            for (var y = 0; y < nuevoArray[x].length; y++) {
+                if (y == 0) {
+                    nuevavariable.push(nuevoArray[x][y].toUpperCase())
+
+
+
+                } else {
+                    nuevavariable.push(nuevoArray[x][y])
+                }
+
+
+            }
+            nuevavariable.push(',')
+        }
+        console.log(nuevavariable.join(''));
+    }
+    titleCase("I'm a little tea pot");
+
+
+
+    console.log('======================================');
+
+
+    function largestOfFour(arr) {
+        var williamarra = []
+        for (var i = 0; i < arr.length; i++) {
+            var pivote = 0;
+            for (var x = 0; x < arr[i].length; x++) {
+                console.log(arr[i][x]);
+                if (arr[i][x] > pivote) {
+                    pivote = arr[i][x];
+                }
+
+            }
+            williamarra.push(pivote);
+            console.log(williamarra);
+        }
+        return arr;
+    }
+
+    largestOfFour([
+        [13, 27, 18, 26],
+        [4, 5, 1, 3],
+        [32, 35, 37, 39],
+        [1000, 1001, 857, 1]
+    ])
+
+    console.log('======================================');
+
+
+    console.log('======================================');
+    var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+    // console.log(animals.slice(0, 2));
+    // console.log(animals.slice(2, 4));
+    // console.log(animals.slice(4, 8));
+
+
+    function chunkArrayInGroups(arr, size) {
+        var nuevarray = [];
+        console.log(arr.length / size);
+        var a = 0,
+            b = 0;
+        for (var i = 0; i < (arr.length / size); i++) {
+            b = b + size;
+            nuevarray.push(arr.slice(a, b))
+            a = b;
+        }
+        console.log(nuevarray);
+
+    }
+
+    chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2)
+
+
+
+
+
+
+
+    console.log('======================================');
+
+
+    var str = 'abcde';
+    console.log('substr: ' + str.substr(0, 4));
+
+
+
+    var anyString = 'abcde';
+    console.log('substring: ' + anyString.substring(0, 4));
+
+    function confirmEnding(str, target) {
+        larg = target.length;
+        if (str.substr(-larg) == target) {
+            return true
+
+        } else {
+            return false;
+        }
+
+
+
+    }
+    // console.log(confirmEnding("Walking sdsfjlsaf william", "william"));
+
+
+
+    console.log('======================================');
+
+    function repeatStringNumTimes(str, num) {
+        var pivote = 0,
+            varible = '';
+        while (pivote < num) {
+            pivote++;
+            varible = varible + str;
+        }
+        return varible;
+    }
+
+    repeatStringNumTimes("abc", 3);
+    console.log('======================================');
+    console.log('slice slice slice slice ');
+
+    function wiliam() {
+        var aras = ['william', 'oscar', 'papa', 'mama', 'amor'];
+        ljasdf = aras.slice(1);
+        console.log(aras.slice(1));
+        console.log(aras.slice(0, 2));
+        console.log(aras.slice(2, 4));
+        console.log(aras.slice(-1));
+
+    }
+
+    wiliam()
+    console.log('======================================');
+
+    function truncateString(str, num) {
+        nuevonuemer = num - 3;
+        if (str.length > num && num <= 3) {
+            var troncar = str.slice(0, num);
+            console.log(troncar + '...');
+            return troncar + '...';
+        } else {
+            if (str.length > num) {
+                var troncar = str.slice(0, nuevonuemer);
+                console.log(troncar + '...');
+                return troncar + '...';
+            }
+        }
+        if (num >= str.length) {
+            return str;
+        }
+    }
+    truncateString("Peter Piper picked a peck of pickled peppers", 14)
+
+
+
+    console.log('======================================');
+
+    console.log('splice splice splice splice splice splice ');
+    var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+    console.log(myFish);
+    myFish.splice(2, 0, 'drum'); // insert 'drum' at 2-index position
+    console.log(myFish);
+
+    function slasher(arr, howMany) {
+
+        return arr.slice(howMany);
+    }
+
+    console.log(slasher(["burgers", "fries", "shake"], 1));
+
+    console.log('======================================');
+    var letrer = 'la vidab es bellas';
+    console.log(letrer.indexOf('b'));
+
+    function mutation(arr) {
+        array1 = arr[1].toLowerCase().split('');
+        var resp = arr[0].toLowerCase();
+
+
+        console.log(array1);
+        for (var i = 0; i < array1.length; i++) {
+            console.log(array1[i]);
+            sdfa = resp.indexOf(array1[i]);
+
+            if (resp.indexOf(array1[i]) == -1) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    console.log('======================================');
+    console.log('======================================');
+
+    console.log(mutation(["hello", "Hello"]));
+    var words = ['spray', 'limit', 'william2', 'william2', 'destruction', 'present'];
+    var arrayu = words.filter(x => x == 'william2')
+    console.log(arrayu);
+
+
+    function bouncer(arr) {
+        // var respu = arr.filter(x => x != false && x != null && x != 0 && x != "" && x != undefined && x != NaN);
+        var respu = arr.filter(Boolean);
+        console.log(respu);
+        return respu;
+    }
+
+    console.log(bouncer([false, null, 0, NaN, undefined, ""]));
+
+
+
+
+
+    console.log('======================================');
+    console.log('LLAMAR ARGUMENTS ARGUMENTS ');
+
+    function destroyer(ars) {
+        var args = Array.prototype.slice.call(arguments);
+        var arrau = [];
+
+        for (var x in args) {
+            console.log(args[x]);
+
+            if (x != 0) {
+                arrau = ars.filter(y => y != args[x]);
+                console.log('arrau arrau' + x + ': ' + arrau);
+                console.log(arrau);
+                ars = arrau;
+            }
+
+        }
+
+        return arrau
+
+
+    }
+
+
+    console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
+
+
+
+    console.log('======================================');
+
+    function destroyer(ars) {
+        var args = Array.prototype.slice.call(arguments);
+
+        for (var x in args) {
+            console.log(args[x]);
+
+            if (x != 0) {
+                for (var i = 0; i < ars.length; i++) {
+                    if (ars[i] == args[x]) {
+                        ars.splice(i, 1)
+                    }
+                }
+
+            }
+
+        }
+
+        return ars
+
+
+    }
+
+
+    console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
+    console.log('======================================');
+
+    function destroyer(arr, item) {
+        console.log(arr);
+        console.log(item);
+        for (var x in arr) {
+            if (arr[x] == item) {
+                arr.splice(x, 1)
+            }
+
+        }
+        return arr;
+    }
+    console.log(destroyer([1, 2, 3, 1, 2, 3], 3));
+
+
+    console.log('======================================');
+
+    function getIndexToIns(arr, num) {
+        arr.push(num);
+        arr.sort(function(a,b){
+          return a-b;
+        });
+        console.log(arr);
+        for(var x in arr){
+          if (num==arr[x]) {
+            return 'la respuesta es en la posicion: '+ x;
+          }
+
+        }
+
+    }
+
+   console.log(  getIndexToIns([2, 5, 10], 15)          );
+    console.log('======================================');
+    console.log('======================================');
+    function getIndexToIns(arr) {
+      var comparo;
+      var nuevoarray=[];
+      console.log(arr);
+      for (var i = 0; i < arr.length; i++) {
+        comparo=arr[i];
+
+        for (var x = 0; x < arr.length; x++) {
+          if (comparo>arr[x]) {
+            comparo=arr[x];
+          }
+        }
+        nuevoarray.push(comparo);
+
+
+      }
+      console.log(nuevoarray);
+
+       
+
+    }
+
+   console.log(  getIndexToIns([9,8,7,6,5,4,3,2,1])          );
+    </script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>la vida es bella </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+    .box {
+        position: relative;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease-in-out;
+    }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+    console.log('=================================');
+
+    function sumAll(arr) {
+        var primero;
+        var array = [];
+        var positivo, ppositivo, contador;
+        if (arr[0] < arr[1]) {
+            primero = arr[0];
+        } else {
+            primero = arr[1];
+
+        }
+        console.log('primero: ' + primero);
+        contador = primero - 1;
+        console.log('contador: ' + contador);
+
+        positivo = arr[0] - arr[1]
+        if (positivo < 0) {
+            ppositivo = positivo * -1;
+        } else {
+            ppositivo = positivo;
+        }
+        console.log('ppositivo: ' + ppositivo);
+
+        for (var i = 0; i <= ppositivo; i++) {
+            contador = contador + 1;
+            array.push(contador);
+
+        }
+        var respuesta = 0;
+        for (var i = 0; i < array.length; i++) {
+            respuesta = respuesta + array[i];
+        }
+        console.log('array: ' + array);
+        console.log(array);
+        console.log('respuesta: ' + respuesta);
+        return respuesta;
+
+
+    }
+
+    sumAll([10, 5])
+
+    var arr = [1, 2, 3, 3, 4, 5, 6, 2, 3, 4, 1, 2, 3, 4, 5, 7, 56, 3];
+    var max = arr.reduce(function(a, b) {
+        return Math.max(a, b);
+    });
+    console.log(max);
+
+    var arr = [1, 2, 3, 3, 4, 5, 6, 2, 3, 4, 1, 2, 3, 4, 5, 7, 56, 3];
+    var max = Math.min(...arr); //        <=====metodo BUENO BUENO BUENO BUENO BUENO BUENO BUENO 
+
+
+    console.log(max);
+    console.log('=================================');
+
+    function sumAll(arr) {
+        var minimo, maximo, suma;
+        var array = [];
+        minimo = arr.reduce(function(a, b) { return Math.min(a, b); });
+        maximo = arr.reduce(function(a, b) { return Math.max(a, b); });
+        positivo = Math.abs(arr[0] - arr[1]);
+        suma = minimo - 1
+        for (var i = 0; i <= positivo; i++) {
+            suma = suma + 1
+            array.push(suma);
+        }
+        suma = 0;
+        for (var x = 0; x < array.length; x++) {
+            suma = suma + array[x];
+        }
+        return suma;
+    }
+
+    sumAll([1, 4]);
+
+
+    console.log('=================================');
+
+    function diffArray(arr1, arr2) {
+        var newArr = [];
+        var newArraindex = [];
+        var respuesta = [];
+        for (var i = 0; i < arr1.length; i++) {
+            for (var x = 0; x < arr2.length; x++) {
+                if (arr1[i] == arr2[x]) {
+                    newArr.push(arr1[i]);
+                }
+            }
+        }
+        console.log(newArr);
+        william = arr1.concat(arr2);
+        console.log('william:' + william);
+
+        for (var i = 0; i < newArr.length; i++) {
+            console.log(newArr[i]);
+            respuesta = william.filter(function(x) {
+                return x != newArr[i];
+            });
+            william = respuesta;
+        }
+
+        console.log(william);
+
+
+
+
+
+    }
+
+    diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
+
+
+
+
+    console.log('=================================');
+
+    function convertToRoman(num) {
+        var numeros=[1,4,5,10,50,100,500,1000]
+        var letrasRoman=['I','IV','V','X','L','C','D','M'];
+        console.log(1984%1000%100%10);
+        console.log(1984%1000%100%10);
+        console.log(1984%1000%100%10);
+        console.log(1984%1000%100%10);
+        console.log(1984%1000%100%10);
+        return num;
+    }
+
+    convertToRoman(36);
+
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    </script>
+    </script>
+</body>
+
+</html>

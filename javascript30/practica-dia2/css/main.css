@@ -1,0 +1,43 @@
+body{
+    background: url('http://www.creativehdwallpapers.com/uploads/large/background/sky-blue-background-hd-picture.jpg');
+    background: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.clock{
+    width: 500px;
+    height: 500px;
+    border: 20px solid white;
+    background:transparent;
+    margin: 10px auto;
+    position: relative;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock-face{
+    width: 349px;
+    height: 349px;
+    position: relative;
+    transform: translateX(-24px);
+}
+.hand{
+    width: 200px;
+    height: 10px;
+    background: black;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.03, 1.36, 0.32, 1.74);
+}

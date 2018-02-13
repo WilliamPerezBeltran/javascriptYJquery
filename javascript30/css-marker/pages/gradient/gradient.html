@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="gradient.css">
+    <link rel="stylesheet" type="text/css" href="../../css-general/general.css">
+    <title>css marker💪</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <ul>
+                <li>HTML template</li>
+                <li>WEeb template</li>
+                <li>Css galery</li>
+            </ul>
+        </div>
+    </header>
+    <div class="titulo-container">
+        <div class="titulo-item">css 3.0 maker</div>
+    </div>
+    <div class="contenido">
+        <div class="header-container">
+            <ul>
+                <li class="home">Home</li>
+                <li class="borderRadius">Border radius</li>
+                <li class="gradient">Gradient</li>
+                <li class="css-transform">CSS transform</li>
+                <!-- <li class="css-animation">CSS animation</li> -->
+                <!-- <li class="transition">CSS transition</li> -->
+                <li class="rgba">RBGA</li>
+                <li class="text-shadow">Text shadow</li>
+                <li class="box-shadow">Box shadow</li>
+                <li class="text-rotation">Text Rotation</li>
+                <!-- <li class="font-face">@Font Face</li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="contenido1">
+            <div class="box derecha">
+                <table>
+                    <tr>
+                        <td>Gradient Type:</td>
+                        <td>
+                            <select id="gradientStyle">
+                                <option value="radialGradient">radial-gradient</option>
+                                <option value="linearGradient">linear-gradient</option>
+                                <option value="repeatingRadialGradien">repeating-linear-gradient</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <table class="selected-radial-gradient">
+                    <tr>
+                        <td>Start Color:</td>
+                        <td>
+                            <input type="color" value="#ff3333" name="fromColor">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>End Color:</td>
+                        <td>
+                            <input type="color" value="#FFE4E1" name="toColor">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Start H Position:</td>
+                        <td>
+                            <input type="range" value="50" min="0" max="100" data-sizing="%" name="startHPosition">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Start V Position:</td>
+                        <td>
+                            <input type="range" value="50" min="0" max="100" data-sizing="%" name="startVPosition">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>End H Position:</td>
+                        <td>
+                            <input type="range" value="50" min="0" max="100" data-sizing="%" name="endHPosition">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>End V Position:</td>
+                        <td>
+                            <input type="range" value="50" min="0" max="100" data-sizing="%" name="endVPosition">
+                        </td>
+                    </tr>
+                </table>
+                <table class="selected-linear-gradient">
+                    <tr>
+                        <td>Angle:</td>
+                        <td>
+                            <input type="range" value="50" min="0" max="100" name="angle" data-sizing="deg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Color 1:</td>
+                        <td>
+                            <input type="color" value="#FFFF00" name="colorLinear1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Space 1:</td>
+                        <td>
+                            <input type="range" value="50" min="0" max="100" name="spaceColorLinear1" data-sizing="px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Color 2:</td>
+                        <td>
+                            <input type="color" value="#ff0000" name="colorLinear2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Space 2:</td>
+                        <td>
+                            <input type="range" value="50" min="0" max="100" name="spaceColorLinear2" data-sizing="px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Color 3:</td>
+                        <td>
+                            <input type="color" value="#0000ff" name="colorLinear3">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Space 3:</td>
+                        <td>
+                            <input type="range" value="50" min="0" max="100" name="spaceColorLinear3" data-sizing="px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Color 4:</td>
+                        <td>
+                            <input type="color" value="#ff6347" name="colorLinear4">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Space 4:</td>
+                        <td>
+                            <input type="range" value="50" min="0" max="100" name="spaceColorLinear4" data-sizing="px">
+                        </td>
+                    </tr>
+                </table>
+                <table class="selected-repeating-radial-gradient">
+                    
+                    <tr>
+                        <td>Color 1:</td>
+                        <td>
+                            <input type="color" value="#FFFF00" name="colorGradient1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Space 1:</td>
+                        <td>
+                            <input type="range" value="10" min="0" max="45" name="spaceColorGradient1" data-sizing="px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Color 2:</td>
+                        <td>
+                            <input type="color" value="#ff0000" name="colorGradient2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Space 2:</td>
+                        <td>
+                            <input type="range" value="40" min="0" max="45" name="spaceColorGradient2" data-sizing="px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Color 3:</td>
+                        <td>
+                            <input type="color" value="#0000ff" name="colorGradient3">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Space 3:</td>
+                        <td>
+                            <input type="range" value="20" min="0" max="45" name="spaceColorGradient3" data-sizing="px">
+                        </td>
+                    </tr>
+                   
+                </table>
+            </div>
+            <div class="box centro">
+                <div class="arriba">
+                    <div class="caja box-modificada-radial-gradient">Gradient</div>
+                    <div class="caja box-modificada-linear-gradient">Gradient</div>
+                    <div class="caja box-modificada-repeating-radial-gradient">Gradient</div>
+                </div>
+                <div class="abajo">
+                    <div class="circle circleTop">html</div>
+                    <div class="circle circleRight">css</div>
+                    <div class="circle circleLeft">js</div>
+                </div>
+            </div>
+            <div class="box izquierda">
+                <div class="setValue-radial-gradient">
+                    <ul>
+                        <li>background:-webkit-gradient( linear,
+                            <span class="startHPosition">50%</span> <span class="startVPosition">50%</span>,
+                            <span class="endHPosition">50%</span> <span class="endVPosition">50%</span>, from( <span class="fromColor">#FFDEAD</span> ), to( <span class="toColor">#FFE4E1</span> ))
+                        </li>
+                    </ul>
+                </div>
+                <div class="setValue-linear-gradient">
+                    <ul>
+                        <li>background-image: repeating-linear-gradient(
+                            <span class="angle">10deg</span>,<span class="colorLinear1">#FFFF00</span>
+                            <span class="spaceColorLinear1">10px</span>,
+                            <span class="colorLinear2">#ff0000</span> <span class="spaceColorLinear2">0px</span>,
+                            <span class="colorLinear3">#0000ff</span> <span class="spaceColorLinear3">20px</span>,
+                            <span class="colorLinear4">#ff6347</span > <span class="spaceColorLinear4">40px</span> )
+                        </li>
+                    </ul>
+                </div><span></span>
+                <div class="setValue-repeating-radial-gradient">
+                    <ul>
+                        <li>background: repeating-radial-gradient(<span class="colorGradient1">#ff6347</span> <span class="spaceColorGradient1">5%</span>, <span class="colorGradient2">#47ff63</span> <span class="spaceColorGradient2">40%</span>, <span class="colorGradient3">#6347ff</span> <span class="spaceColorGradient3">10%</span>)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="gradient.js"></script>
+    <script type="text/javascript" src="../../javascript/javascript-general.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+body {
+    background-image: url('');
+    background: url('https://sabbathian.files.wordpress.com/2010/06/eagle_high_resolution_wallpaper_2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.keys {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.key {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s;
+    text-shadow: 11px 11px 6px rgba(189, 195, 199, 1);
+}
+
+.playing {
+
+    width: 200px;
+    height: 200px;
+    border: 10px solid blue;
+    transition-timing-function: ease-in-out;
+    transform: rotate(360deg) translate(300px, 100px) skew(10deg, 10deg);
+    /*transform: translate(300px, 100px) skew(10deg, 10deg) rotate(360deg);*/
+
+    
+}
+
+.playing1 {
+    width: 120px;
+    height: 120px;
+    background: #3D3F41;
+    transform: rotate(0deg) translate(0px,0px) skew(0deg, 0deg);
+    transition-delay: 1s;
+}
+button {
+  transform-style: preserve-3d;
+}
+button:after {
+  top: -100%;
+  left: 0px;
+  width: 100%;
+  position: absolute;
+  background: #3a9999;
+  border-radius: 5px;
+  content: 'Flipped';
+  transform-origin: left bottom;
+  transform: rotateX(90deg);
+}
+button:hover {
+  transform-origin: center bottom;
+  transform: rotateX(-90deg) translateY(100%);
+}
+
+
+
+

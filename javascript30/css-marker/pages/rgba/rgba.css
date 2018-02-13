@@ -1,0 +1,30 @@
+:root {
+    --R: 19;
+    --G: 15;
+    --B: 1;
+    --Opacity: 1;
+}
+.box-modificada {
+    margin: 5px;
+    width: 150px;
+    height: 100px;
+    border:1px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    /*background-color: rgba(72, 151, 44, 0.6);*/
+    background-color: rgba(var(--R), var(--G), var(--B), var(--Opacity));
+}
+.izquierda ul li{
+    border-bottom: none;
+}
+.derecha input{
+    margin-top:0px !important;
+}
+table td:nth-child(1){
+    width: 130px;
+    text-align: center;
+}

@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: lightblue;
+}
+
+.container {
+    display: flex;
+    border: 10px solid goldenrod;
+}
+
+.box {
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.box1 {
+    background: #3090A1;
+}
+
+.box2 {
+    background: #7BCECC;
+}
+
+.box3 {
+    background: #FEF8E6;
+}
+
+.box4 {
+    background: #BC5148;
+}
+
+.box5 {
+    background: #DE561C;
+}
+
+.box6 {
+    background: #FDA831;
+}
+
+.box7 {
+    background: #F4D143;
+}
+
+.box8 {
+    background: #D0EF84;
+}
+
+.box9 {
+    background: #FFFDBB;
+}
+
+.box10 {
+    background: #F4F4F4;
+}

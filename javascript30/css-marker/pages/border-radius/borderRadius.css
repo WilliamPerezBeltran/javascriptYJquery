@@ -1,0 +1,27 @@
+:root {
+    --borderStyle: ridge;
+    --borderWidth: 10px;
+    --borderColor: white;
+    --borderTopLeftRadius: 20px;
+    --borderTopRightRadius: 20px;
+    --borderBottomLeftRadius: 20px;
+    --borderBottomRightRadius: 20px;
+}
+.box-modificada {
+    margin: 5px;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+
+    border-style: var(--borderStyle);
+    border-width: var(--borderWidth);
+    border-color: var(--borderColor);
+    border-top-left-radius: var(--borderTopLeftRadius);
+    border-top-right-radius: var(--borderTopRightRadius);
+    border-bottom-left-radius: var(--borderBottomLeftRadius);
+    border-bottom-right-radius: var(--borderBottomRightRadius);
+}

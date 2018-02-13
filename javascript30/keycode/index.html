@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>day1</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="effect">
+        <span class="key">a</span>
+        <span>=</span>
+        <h3>a</h3>
+    </div>
+    <script type="text/javascript">
+    const text = document.querySelector('h3');
+    const key = document.querySelector('.key');
+    window.addEventListener('keydown', triggerEvent);
+    function triggerEvent(e) {
+        console.log(e);
+        text.innerHTML = e.keyCode;
+        key.innerHTML = e.key;
+        console.log(e.keyCode);
+    }
+    </script>
+</body>
+
+</html>

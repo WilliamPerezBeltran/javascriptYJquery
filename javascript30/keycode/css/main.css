@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #D3D3D3;
+    font-size: 300px;
+}
+.effect{
+  margin-top: 100px;: 
+}
+
+div {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    color: #FFFFFF;
+   font-family: 'Comic Sans MS', cursive, sans-serif;
+   font-weight: bold;
+   text-shadow: 0px 0px 0 rgb(251,251,251),1px -1px 0 rgb(247,247,247),2px -2px 0 rgb(243,243,243),3px -3px 0 rgb(239,239,239),4px -4px 0 rgb(235,235,235),5px -5px 0 rgb(231,231,231),6px -6px 0 rgb(227,227,227),7px -7px 0 rgb(224,224,224),8px -8px 0 rgb(220,220,220),9px -9px 0 rgb(216,216,216),10px -10px 0 rgb(212,212,212),11px -11px 0 rgb(208,208,208),12px -12px 0 rgb(204,204,204),13px -13px 0 rgb(200,200,200),14px -14px 0 rgb(196,196,196),15px -15px 0 rgb(192,192,192),
+16px -16px  0 rgb(188,188,188),17px -17px 16px rgba(0,0,0,0.45),17px -17px 1px rgba(0,0,0,0.5),0px 0px 16px rgba(0,0,0,.2)
+}

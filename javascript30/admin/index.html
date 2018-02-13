@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <title>Admin william Pérez💪</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="#0" class="mobile-nav"><span></span></a>
+        <nav class="top-navigation">
+            <ul>
+                <li>Ramsich</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mainWrapper">
+        <nav class="side-navigation">
+            <ul>
+                <li>
+                    <span><i class="ion-ios-pricetags"></i></span>
+                    <span>Tags</span>
+                </li>
+                <li class="active">
+                    <span><i class="ion-pie-graph"></i></span>
+                    <span>Analytics</span>
+                </li>
+                <li>
+                    <span><i class="ion-person-stalker"></i></span>
+                    <span>Users</span>
+                </li>
+                <li>
+                    <span><i class="ion-calendar"></i></span>
+                    <span>Calendar</span>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-ontent">
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.mobile-nav').click(function(){
+                $('.side-navigation').toggleClass('visible');
+            })
+        })
+    </script>
+</body>
+
+</html>
